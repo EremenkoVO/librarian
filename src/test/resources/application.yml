@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    url: jdbc:hsqldb:mem:testdb;DB_CLOSE_DELAY=-1
+    username: app
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.HSQLDialect
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        format_sql: 'true'
+    show-sql: 'false'
+  liquibase:
+    change-log: classpath:db.changelog/db.changelog-master.yml

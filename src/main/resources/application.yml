@@ -1,0 +1,20 @@
+spring:
+  main:
+    web-application-type: none
+  datasource:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    url: jdbc:hsqldb:file:librarian_db
+    username: app
+    password: 123456
+  jpa:
+    database-platform: org.hibernate.dialect.HSQLDialect
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: classpath:db.changelog/db.changelog-master.yml
+
+application:
+  title: 'Библиотекарь'
+  height: 600
+  width: 800
