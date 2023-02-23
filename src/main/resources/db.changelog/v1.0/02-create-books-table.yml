@@ -22,13 +22,13 @@ databaseChangeLog:
                     primaryKeyName: pk_books
               - column:
                   name: short_name
-                  type: varchar(255)
+                  type: varchar(250)
                   remarks: 'Короткое название книги'
                   constraints:
                     nullable: false
               - column:
                   name: full_name
-                  type: varchar(255)
+                  type: varchar(500)
                   remarks: 'Полное название книги'
               - column:
                   name: year_publish
@@ -53,7 +53,7 @@ databaseChangeLog:
                   remarks: 'Язык на котором написана книга (RUS, ENG)'
               - column:
                   name: shortcomings
-                  type: varchar(255)
+                  type: varchar(250)
                   remarks: 'Недостатки. (Качество книги)'
               - column:
                   name: file_path

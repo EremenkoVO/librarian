@@ -1,0 +1,46 @@
+librarian: {
+
+    categories: {
+        shape: sql_table
+
+        id: long {constraint: primary_key}
+        name: varchar(250)
+        description: text
+        parent_id: long {constraint: foreign_key}
+    }
+
+    books: {
+        shape: sql_table
+
+        id: long {constraint: primary_key}
+        short_name: varchar(250)
+        full_name: varchar(500)
+        year_publish: int
+        description: text
+        format: varchar(4)
+        language: varchar(3)
+        shortcomings: varchar(250)
+        file_path: varchar(500)
+        category_id: long {constraint: foreign_key}
+    }
+
+    authors: {
+        shape: sql_table
+
+        id: long {constraint: primary_key}
+        first_name: varchar(250)
+        last_name: varchar(250)
+    }
+
+    books_authors: {
+        shape: sql_table
+
+        book_id: long {constraint: primary_key}
+        author_id: long {constraint: primary_key}
+    }
+
+    categories.parent_id -> categories.id
+    books.category_id -> categories.id
+    books_authors.book_id -> books.id
+    books_authors.author_id -> authors.id
+}

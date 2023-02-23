@@ -5,7 +5,7 @@ spring:
     driver-class-name: org.hsqldb.jdbc.JDBCDriver
     url: jdbc:hsqldb:file:librarian_db
     username: app
-    password: 123456
+    password: ${DATABASE_PASSWORD}
   jpa:
     database-platform: org.hibernate.dialect.HSQLDialect
     generate-ddl: false

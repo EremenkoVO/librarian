@@ -22,11 +22,11 @@ databaseChangeLog:
                     primaryKeyName: pk_authors
               - column:
                   name: first_name
-                  type: varchar(255)
+                  type: varchar(250)
                   remarks: 'Имя автора'
                   constraints:
                     nullable: false
               - column:
                   name: last_name
-                  type: varchar(255)
+                  type: varchar(250)
                   remarks: 'Фамилия автора'
