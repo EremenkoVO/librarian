@@ -1,5 +1,6 @@
 package sa.ovodkov.librarian.service;
 
+import sa.ovodkov.librarian.dto.CategoryDTO;
 import sa.ovodkov.librarian.entity.Category;
 
 import java.util.List;
@@ -15,4 +16,11 @@ public interface CategoryService {
      * @return Список верхне уровневых категорий.
      */
     List<Category> getRootCategory();
+
+    /**
+     * Добавить новую категорию книг в систему.
+     *
+     * @param category Данные о новой категории книг
+     */
+    void addCategory(CategoryDTO category);
 }
